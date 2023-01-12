@@ -8,7 +8,7 @@
 ## Notes
 ### Components
 Create a new component with `ng generate component component-name` or `ng g c component-name`  
-*Use --flat to generate at top of folder*  
+*Use --flat to generate at top of folder and --skip-tests to prevent tests files being generated*  
 In HTML the use syntax is:
 - element style `<component-name>` 
 - attribute style `<htmlElement component-name>`
