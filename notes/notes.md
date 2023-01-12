@@ -22,3 +22,6 @@ Inside the app.component.ts file the selector attributes are
 - string interpolation
 - property binding use square brackets `[property]='property'`
 - event binding `(eventName)='executeCode` use `(event)='function($event)` to pass event data.
+
+### Directives
+- `*ngFor='let recipe of recipes'` loop through items in DOM without duplicating code
