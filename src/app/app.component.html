@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<app-header></app-header>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+<div class="container">
+  <app-recipes></app-recipes>
+  <app-shopping-list></app-shopping-list>
+</div>
 
-<body>
-  <header class="jumbotron">
-    <div class="container text-center">
-      <h1> {{title}} </h1>
-      <p>Hello World!</p>
-    </div>
+<!-- <app-server></app-server> -->
 
-  </header>
-  <section class="container-fluid">
-    <p>
-      This is a student project to learn how to work with Angular and Bootstrap 3 to create dynamic web applications.
-    </p>
-  </section>
-  <footer class="container-fluid text-center">
-    <p>&copy; {{author}} | {{class}} | {{date}}</p>
-  </footer>
-</body>
-
-</html>
+<footer class="container-fluid text-center">
+  <p>&copy; {{author}} | {{class}} | {{date}}</p>
+</footer>
