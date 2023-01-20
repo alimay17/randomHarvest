@@ -44,7 +44,7 @@ Inside the app.component.ts file the selector attributes are
 - Child to parent event emitter
 ### Syntax
 #### In child component:
-
+- `@Output() recipeSelected = new EventEmitter<void>();`
 #### In parent component:
 
 ## View
