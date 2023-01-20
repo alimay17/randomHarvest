@@ -23,6 +23,7 @@ Inside the app.component.ts file the selector attributes are
 - event binding `(eventName)='executeCode` use `(event)='function($event)` to pass event data.
 ### Directives
 - `*ngFor='let recipe of recipes'` loop through items in DOM without duplicating code
+- put in component to loop through list of each: `<app-recipe-item *ngFor="let recipe of recipes"></app-recipe-item>`
 
 ## Property Binding
 - can assign aliases
@@ -31,7 +32,8 @@ Inside the app.component.ts file the selector attributes are
 - default is properties are only available inside a component
 ### Syntax
 #### In parent component template:
-  - `[propertyName or aliasName]='elementInParent'`  
+  - `[propertyName or aliasName]='elementInParent'`  inside of component element;
+  - `<app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl"></app-recipe-item>`
 
 #### In child component:
   - `import { Import } from @angular/core`
