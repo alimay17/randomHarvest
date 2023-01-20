@@ -4,7 +4,6 @@
   - Inside the project folder run `npm install --save bootstrap@3`
   - add to angular.json in styles: `"node_modules/bootstrap/dist/css/bootstrap.min.css"`
 
-
 ## Notes
 ### Components
 Create a new component with `ng generate component component-name` or `ng g c component-name`  
@@ -22,6 +21,36 @@ Inside the app.component.ts file the selector attributes are
 - string interpolation
 - property binding use square brackets `[property]='property'`
 - event binding `(eventName)='executeCode` use `(event)='function($event)` to pass event data.
-
 ### Directives
 - `*ngFor='let recipe of recipes'` loop through items in DOM without duplicating code
+
+## Property Binding
+- can assign aliases
+- parent to child property binding
+- Need property in child component to bind to
+- default is properties are only available inside a component
+### Syntax
+#### In parent component template:
+  - `[propertyName or aliasName]='elementInParent'`  
+
+#### In child component:
+  - `import { Import } from @angular/core`
+  - `@Input(alias here) property: type;`
+
+## Event Binding
+- can assign aliases
+- Child to parent event emitter
+### Syntax
+#### In child component:
+
+#### In parent component:
+
+## View
+
+## Local References
+Holds reference to an entire HTML element and its properties
+Only works inside the HTML template
+Can pass this as a parameter to functions
+### Syntax
+In element `<htmlElement #nameOfReference></htmlElement>`
+- type is property: HTMLInputElement;
