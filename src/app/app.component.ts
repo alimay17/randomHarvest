@@ -12,4 +12,10 @@ export class AppComponent {
   date = new Date().toLocaleString(
     'default', {month: 'short', year: 'numeric'}
   );
+
+  // navigation
+  loadedFeature = 'recipe'; 
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }
