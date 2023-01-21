@@ -45,7 +45,9 @@ Inside the app.component.ts file the selector attributes are
 ### Syntax
 #### In child component:
 - `@Output() recipeSelected = new EventEmitter<void>();`
-#### In parent component:
+- `this.recipeSelected.emit();`
+#### In parent component template:
+- `<app-shopping-list-edit (ingredientAdded)="onIngredientAdded($event)"></app-shopping-list-edit>`
 
 ## View
 
