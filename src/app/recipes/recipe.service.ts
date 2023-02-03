@@ -9,6 +9,9 @@ export class RecipeService {
   // constructors
   constructor() { }
 
+  // events
+  recipeSelected = new EventEmitter<Recipe>();
+
   // properties
   private recipes: Recipe[] = [
     new Recipe(
@@ -24,7 +27,6 @@ export class RecipeService {
       [new Ingredient('beans', 12)]
       )
   ];
-  recipeSelected = new EventEmitter<Recipe>();
 
 
   // methods
