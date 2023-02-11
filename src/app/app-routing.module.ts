@@ -11,18 +11,14 @@ import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 
 // routing
 const appRoutes: Routes = [
-  // default
-  {path: '', redirectTo: '/recipes'},
-
   // recipes
-  {path: 'recipes', component: RecipesComponent, 
-    children: [
-
-    ]
-  },
+  {path: 'recipes', component: RecipesComponent},
 
   // shopping
   {path: 'shopping-list', component: ShoppingListComponent},
+
+  // default
+  {path: '', redirectTo: '/recipes', pathMatch: 'full'},
 
   // not found
   {path: 'not-found', component: ErrorPageComponent, data: {message: 'You have an error'}},
@@ -31,9 +27,7 @@ const appRoutes: Routes = [
 
 // main config
 @NgModule({
-  imports: [
-    RouterModule.forRoot(appRoutes)
-  ],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule{}
