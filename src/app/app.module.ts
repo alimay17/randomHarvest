@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
 import { HeaderComponent } from './header.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
@@ -17,7 +16,6 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
     HeaderComponent,
     RecipesComponent,
     RecipeListComponent,
