@@ -1,7 +1,9 @@
+// angular imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+// app imports
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -12,7 +14,10 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/shopping-list-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { AppRoutingModule } from './app-routing.module';
 
+// main config
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +28,13 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     RecipeDetailComponent,
     ShoppingListComponent,
     ShoppingListEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule, 
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
