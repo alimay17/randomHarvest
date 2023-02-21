@@ -79,7 +79,6 @@ export class RecipeEditComponent implements OnInit {
         }
       }
     }
-
     // assign values
     this.recipeForm = new FormGroup({
       'name': new FormControl(recipeName, Validators.required),
