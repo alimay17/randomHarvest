@@ -69,7 +69,10 @@
           type="button" 
           class="btn btn-info">Add Ingredient</button>
           <button type="submit" class="btn btn-success">Save</button>
-          <button type="button" class="btn btn-danger">Cancel</button>
+          <button
+            (click)="onCancel()"
+            type="button" 
+            class="btn btn-danger">Cancel</button>
         </div>
       </div>
     </form>
