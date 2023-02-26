@@ -36,10 +36,12 @@ export class RecipeEditComponent implements OnInit {
   }
 
   onSubmit(){
+    console.log(this.recipeForm.value);
     if(this.editMode){
       this.recipeService.updateRecipe(this.id, this.recipeForm.value);
     } else this.recipeService.addRecipe(this.recipeForm.value)
     this.onCancel();
+    console.log(this.recipeService.getRecipes());
   }
 
   onAddIngredient(){
@@ -53,6 +55,10 @@ export class RecipeEditComponent implements OnInit {
 
   onCancel() {
     this.router.navigate(['../'], {relativeTo: this.route});
+  }
+
+  onDeleteIngredient(index: number){
+    (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
   }
 
   private initForm() {
@@ -74,9 +80,10 @@ export class RecipeEditComponent implements OnInit {
       imagePath = recipe.imagePath;
       description = recipe.description;
       if(recipe['ingredients']){
-        for(let i of recipe.ingredients){
+        recipe['ingredients'].forEach(i => {
+          console.log(i); 
           recipeIngredients.patchValue([{'name': i.name, 'amount': i.amount}]);
-        }
+        });
       }
     }
     // assign values
@@ -89,6 +96,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   getControls(){
+    // console.log((<FormArray>this.recipeForm.get('ingredients')).controls);
     return(<FormArray>this.recipeForm.get('ingredients')).controls;
   }
 
