@@ -16,20 +16,7 @@ export class RecipeService {
   constructor() { }
 
   // properties
-  private recipes: Recipe[] = [
-    new Recipe(
-      'Jollof Rice', 
-      'Most Excellent Rice Dish', 
-      'https://i0.wp.com/www.nigerianlazychef.com/wp-content/uploads/2015/05/IMG_2943-2.jpg',
-      [new Ingredient('rice', 12)]
-      ),
-    new Recipe(
-      'Jollof Rice2', 
-      'Most Excellent Rice Dish', 
-      'https://i0.wp.com/www.nigerianlazychef.com/wp-content/uploads/2015/05/IMG_2943-2.jpg',
-      [new Ingredient('beans', 12)]
-      )
-  ];
+  private recipes: Recipe[] = [];
 
   // methods
   getRecipes() {
@@ -52,6 +39,11 @@ export class RecipeService {
 
   deleteRecipe(index: number){
     this.recipes.splice(index, 1);
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  setRecipes(recipes: Recipe[]){
+    this.recipes = recipes;
     this.recipesChanged.next(this.recipes.slice());
   }
 
